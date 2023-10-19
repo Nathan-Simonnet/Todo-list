@@ -5,7 +5,26 @@
     border: 1px solid red;
 }
 
-form {}
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    text-align: center;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border: 2px solid black;
+    border-radius: 15px;
+    background: #f6bf65;
+
+    min-height: 10rem;
+    min-width: 40%;
+}
 
 h1 {}
 
