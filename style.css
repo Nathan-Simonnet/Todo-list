@@ -6,7 +6,9 @@
 }
 
 body {
-    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    /* background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+    background: #a18cd1;
+
     min-height: 100vh;
     text-align: center;
 
@@ -17,10 +19,12 @@ body {
     align-items: center;
 }
 
+
+/* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
 form {
     border: 2px solid black;
     border-radius: 15px;
-    background: #f6bf65;
+    background: #fbc2eb;
 
     min-height: 10rem;
     min-width: 40%;
@@ -29,11 +33,13 @@ form {
 
     & div {
 
-        input [type="text"] {}
+        & input [type="text"] {}
 
-        ul {
+        & ul {
 
-            li {}
+            & li {
+                list-style-type: none;
+            }
         }
 
     }
