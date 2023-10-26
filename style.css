@@ -24,16 +24,17 @@ form {
 
     min-height: 10rem;
     min-width: 40%;
+
+    & h1 {}
+
+    & div {
+
+        input [type="text"] {}
+
+        ul {
+
+            li {}
+        }
+
+    }
 }
-
-h1 {}
-
-div {}
-
-#ul-container {}
-
-input [type="text"] {}
-
-ul {}
-
-li {}
