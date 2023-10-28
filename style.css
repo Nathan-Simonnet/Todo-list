@@ -4,10 +4,12 @@
 }
 
 * {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
+
+    /* border: 2px solid red; */
 }
 
 body {
@@ -35,14 +37,10 @@ form {
     border-radius: 15px;
 
     min-height: 10rem;
-    min-width: 40%;
+    min-width: 450px;
 
     color: var(--Purple-bold);
-    text-shadow: rgba(0, 0, 0, 0.371) 2px 2px 2px;
-
-    & h1 {
-        /* border: 4px solid green; */
-    }
+    text-shadow: rgba(0, 0, 0, 0.371) 1px 1px 1px;
 
     & div {
         font-size: 20px;
@@ -64,12 +62,9 @@ form {
 
             color: var(--Purple-bold);
             font-size: 20px;
-            /* font-weight: bold; */
 
             transition: 0.3s;
         }
-
-        & input::placeholder {}
 
         & input:focus {
             border: 4px solid var(--Purple-bold);
@@ -84,10 +79,51 @@ form {
 
         & ul {
 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            min-width: 100%;
+
             & li {
+                position: relative;
                 list-style-type: none;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding-left: 20px;
+
+                cursor: pointer;
+
+                user-select: none;
+
+                /* & img {
+                    position: relative;
+                    transform: translatey(6px);
+                    height: 20px;
+                } */
+            }
+
+            & li:hover {
+                text-shadow: none;
+            }
+
+            & li::before {
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(-50%, -50%);
+                content: url(docs/pictures/flower-resized.png);
+                height: 20px;
+                width: 20px;
+            }
+
+            & li.checked::before {
+                content: url(docs/pictures/check-resized.png)
             }
         }
-
     }
 }
