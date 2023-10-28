@@ -43,6 +43,7 @@ form {
 
     min-height: 10rem;
     min-width: 450px;
+    max-width: 100%;
 
     color: var(--Purple-bold);
     text-shadow: rgba(0, 0, 0, 0.371) 1px 1px 1px;
