@@ -43,7 +43,7 @@ form {
 
     min-height: 10rem;
     min-width: 450px;
-    max-width: 100%;
+    max-width: 90%;
 
     color: var(--Purple-bold);
     text-shadow: rgba(0, 0, 0, 0.371) 1px 1px 1px;
@@ -90,7 +90,9 @@ form {
             justify-content: flex-start;
             align-items: flex-start;
 
-            min-width: 100%;
+            /* overflow: scroll; */
+
+            width: 100%;
 
             & li {
                 position: relative;
@@ -99,7 +101,6 @@ form {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 padding-left: 20px;
 
                 cursor: pointer;
@@ -111,9 +112,9 @@ form {
 
             & li::before {
                 position: absolute;
-                top: 50%;
+                top: 0%;
                 left: 0%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, 3px);
                 content: url(docs/pictures/flower-resized.png);
                 height: 20px;
                 width: 20px;
@@ -158,3 +159,16 @@ span.flowers {
 
     animation: flowerFalling 3s ease-in forwards;
 }
+
+/* ::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1c7c7;
+} */
