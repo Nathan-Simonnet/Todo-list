@@ -1,2 +1,3 @@
 # Todo-list
-Dépoussiérage d'anciens mini projets
+Classic, but good anyway
+Dom, local storage, setimeout loop,animations
