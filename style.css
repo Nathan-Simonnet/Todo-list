@@ -1,6 +1,8 @@
 :root {
-    --Purple-bold: rgb(90, 9, 90);
-    --Purple-light: #fbabe593;
+    --body-color: #9893DA;
+    --card-color: #c8caf6;
+    --text-color: #2b2484;
+    --input-border: #544e9e;
 }
 
 * {
@@ -12,13 +14,12 @@
 }
 
 body {
-    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-
     min-height: 100vh;
-    text-align: center;
 
+    background: var(--body-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,27 +34,33 @@ form * {
 }
 
 form {
-    position: relative;
-
-    background: var(--Purple-light);
-    box-shadow: 2px 2px 6px black;
-
-    border: 2px solid rgba(0, 0, 0, 0.61);
     border-radius: 15px;
-
     min-height: 10rem;
     min-width: 450px;
     max-width: 90%;
 
-    color: var(--Purple-bold);
+    background: var(--card-color);
+    color: var(--text-color);
+    border: 2px solid rgba(0, 0, 0, 0.61);
     text-shadow: rgba(0, 0, 0, 0.371) 1px 1px 1px;
+    box-shadow: 2px 2px 6px black;
+    position: relative;
 
-    & div {
+    & h1 {
+
+        margin: 12px;
+    }
+
+    & .ul-container {
         font-size: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        & label {
+            margin: 6px;
+        }
 
         & input {
             display: flex;
@@ -64,12 +71,12 @@ form {
             background: var(--Purple-light);
             border-radius: 6px;
 
-            border: 4px solid rgb(90, 90, 90);
+            border: 4px solid var(--input-border);
 
             color: var(--Purple-bold);
             font-size: 20px;
 
-            transition: 0.3s;
+            transition: 0.1s;
         }
 
         & input:focus {
@@ -77,10 +84,15 @@ form {
             outline: none;
         }
 
-        & input:focus::placeholder {
-            color: var(--Purple-bold);
+        & input::placeholder {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-            transition: 0.3s;
+        & input:focus::placeholder {
+            opacity: 0;
         }
 
         & ul {
@@ -160,7 +172,8 @@ span.flowers {
     animation: flowerFalling 3s ease-in forwards;
 }
 
-/* ::-webkit-scrollbar {
+/* Right scroll bar design */
+::-webkit-scrollbar {
     width: 12px;
 }
 
@@ -171,4 +184,4 @@ span.flowers {
 
 ::-webkit-scrollbar-track {
     background: #d1c7c7;
-} */
+}
